@@ -35,7 +35,7 @@ services:
       - ./backend/db/migrations/0001-init.up.sql:/docker-entrypoint-initdb.d/0001-init.up.sql
       - ./envs/localhost/seed.sql:/docker-entrypoint-initdb.d/0002-seed.sql
   web:
-    image: hydroprotocolio/hydro-scaffold-dex-web:latest
+    image: hdriqi/vestrade-app:alpha.0.0.1
     container_name: hydro-scaffold-dex-web
     ports:
       - 127.0.0.1:3000:8043

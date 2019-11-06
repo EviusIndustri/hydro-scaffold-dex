@@ -37,7 +37,9 @@ class Header extends React.PureComponent {
     const { currentMarket, markets, dispatch } = this.props;
     return (
       <div className="navbar bg-blue navbar-expand-lg">
-        <img className="navbar-brand" src={require('../../images/hydro.svg')} alt="hydro" />
+        <img className="navbar-brand" style={{
+          height: '50px'
+        }} src={require('../../images/vestrade.png')} alt="hydro" />
         <div className="dropdown navbar-nav mr-auto">
           <button
             className="btn btn-primary header-dropdown dropdown-toggle"
