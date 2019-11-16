@@ -34,7 +34,7 @@ services:
     environment:
       - CONFIG_VARS=REACT_APP_API_URL,REACT_APP_WS_URL,REACT_APP_NODE_URL,REACT_APP_HYDRO_PROXY_ADDRESS,REACT_APP_HYDRO_TOKEN_ADDRESS,REACT_APP_WETH_TOKEN_ADDRESS,REACT_APP_NETWORK_ID
       - REACT_APP_API_URL=https://alpha-api.vestrade.io
-      - REACT_APP_WS_URL=ws://alpha-ws.vestrade.io/
+      - REACT_APP_WS_URL=wss://alpha-ws.vestrade.io/
       - REACT_APP_NODE_URL=https://rinkeby.infura.io/v3/cabc724fb9534d1bb245582a74ccf3e7
       - REACT_APP_HYDRO_PROXY_ADDRESS=0x67a4e271949cd9a5b704904fc316ef507d8c7beb
       - REACT_APP_HYDRO_TOKEN_ADDRESS=0xd586fefc58865884d1ba69646c9ed587ce9dd0e6
