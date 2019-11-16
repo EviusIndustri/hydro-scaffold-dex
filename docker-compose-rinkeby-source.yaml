@@ -61,7 +61,7 @@ services:
       - WATCHER_HEALTH_CHECK_URL=http://watcher:4003/metrics
       - WEBSOCKET_HEALTH_CHECK_URL=http://ws:4002/metrics
       - HSK_PROXY_ADDRESS=0x67a4e271949cd9a5b704904fc316ef507d8c7beb
-      - HSK_RELAYER_ADDRESS=___CHANGE_ME___
+      - HSK_RELAYER_ADDRESS=0xE08223A981939dE6E9751eB7da47Bef72DC8B847
     volumes:
       - datavolume:/data
     depends_on:
@@ -83,7 +83,7 @@ services:
       - HSK_BLOCKCHAIN_RPC_URL=https://rinkeby.infura.io/v3/cabc724fb9534d1bb245582a74ccf3e7
       - HSK_HYDRO_TOKEN_ADDRESS=0xd586fefc58865884d1ba69646c9ed587ce9dd0e6
       - HSK_PROXY_ADDRESS=0x67a4e271949cd9a5b704904fc316ef507d8c7beb
-      - HSK_RELAYER_ADDRESS=___CHANGE_ME___
+      - HSK_RELAYER_ADDRESS=0xE08223A981939dE6E9751eB7da47Bef72DC8B847
       - HSK_LOG_LEVEL=DEBUG
     volumes:
       - datavolume:/data
@@ -154,8 +154,8 @@ services:
       - HSK_DATABASE_URL=postgres://postgres:postgres@db/postgres?sslmode=disable
       - HSK_BLOCKCHAIN_RPC_URL=https://rinkeby.infura.io/v3/cabc724fb9534d1bb245582a74ccf3e7
       - HSK_HYBRID_EXCHANGE_ADDRESS=0x5842e020ce9928f878777c1e3b62a790e425fcc4
-      - HSK_RELAYER_ADDRESS=___CHANGE_ME___
-      - HSK_RELAYER_PK=___CHANGE_ME___
+      - HSK_RELAYER_ADDRESS=0xE08223A981939dE6E9751eB7da47Bef72DC8B847
+      - HSK_RELAYER_PK=81607D4C200B551A4D30865D38E03E16DBF7E0CC855D426A58453E6F1FE539E3
       - HSK_LOG_LEVEL=DEBUG
     volumes:
       - datavolume:/data
