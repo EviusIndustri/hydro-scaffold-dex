@@ -68,7 +68,11 @@ class App extends React.PureComponent {
       return null;
     }
     return (
-      <div className="app">
+      <div className="app" style={{
+        fontFamily: `'Nunito', sans-serif`
+      }}>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap" rel="stylesheet" />
         <SDKWallet title="Starter Kit Wallet" nodeUrl={env.NODE_URL} defaultWalletType="Hydro-Wallet" />
         <WebsocketConnector />
         <Header />

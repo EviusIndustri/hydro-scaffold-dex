@@ -99,7 +99,7 @@ class Trade extends React.PureComponent {
         <div className="title">
           <div>
             <div>{currentMarket.id}</div>
-            <div className="text-secondary">Make a Limit Order</div>
+            <div className="text-secondary">Set Limit Order</div>
           </div>
         </div>
         <div className="trade flex-1 flex-column">
@@ -156,8 +156,14 @@ class Trade extends React.PureComponent {
                   </div>
                 </div>
               </div>
-              <button type="submit" className={`form-control btn ${side === 'buy' ? 'btn-success' : 'btn-danger'}`}>
-                {side} {currentMarket.baseToken}
+              <button type="submit" className={`form-control btn text-white px-4 py-2 rounded border-0 shadow-xl ${side === 'buy' ? 'btn-success' : 'btn-danger'}`}
+                style={{
+                  backgroundImage: "linear-gradient(180deg, #3C39A1 0%, #2A217F 100%)"
+                }}
+              >
+                <span className="font-bold tracking-wide">
+                  {side} {currentMarket.baseToken}
+                </span>
               </button>
             </form>
           </div>

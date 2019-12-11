@@ -36,19 +36,32 @@ class Header extends React.PureComponent {
   render() {
     const { currentMarket, markets, dispatch } = this.props;
     return (
-      <div className="navbar bg-blue navbar-expand-lg">
+      <div className="navbar navbar-expand-lg" style={{
+        backgroundColor: "#1B105F"
+      }}>
         <img className="navbar-brand" style={{
           height: '50px'
-        }} src={require('../../images/vestrade.png')} alt="hydro" />
+        }} src={require('../../images/vestrade-white.svg')} alt="hydro" />
         <div className="dropdown navbar-nav mr-auto">
           <button
-            className="btn btn-primary header-dropdown dropdown-toggle"
+            className="btn text-white px-4 py-2 rounded border-0 shadow-xl"
             type="button"
             id="dropdownMenuButton"
             data-toggle="dropdown"
             aria-haspopup="true"
-            aria-expanded="false">
-            {currentMarket && currentMarket.id}
+            aria-expanded="false"
+            style={{
+              backgroundImage: "linear-gradient(180deg, #3C39A1 0%, #2A217F 100%)"
+            }}
+          >
+            <div className="flex items-center">
+              <span className="font-bold tracking-wide">{currentMarket && currentMarket.id}</span>
+              <span className="pl-2">
+                <svg width="10" height="10" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.0001 15L0.339844 0H17.6604L9.0001 15Z" fill="white"/>
+                </svg>
+              </span>
+            </div>
           </button>
           <div
             className="dropdown-menu"
@@ -75,13 +88,6 @@ class Header extends React.PureComponent {
           <i className="fa fa-bars" />
         </button>
         <div className="collapse" id="navbar-collapse">
-          <a
-            href="https://hydroprotocol.io/developers/docs/overview/what-is-hydro.html"
-            className="btn btn-primary item"
-            target="_blank"
-            rel="noopener noreferrer">
-            DOCUMENTATION
-          </a>
           <div className="item">
             <WalletButton />
           </div>
@@ -98,7 +104,7 @@ class Header extends React.PureComponent {
       return null;
     } else if (address) {
       return (
-        <button className="btn btn-success" style={{ marginLeft: 12 }} onClick={() => dispatch(loginRequest())}>
+        <button  className="font-bold text-white text-lg uppercase" style={{ marginLeft: 12 }} onClick={() => dispatch(loginRequest())}>
           connect
         </button>
       );
